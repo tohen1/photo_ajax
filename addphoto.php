@@ -50,3 +50,16 @@ $pu = new PhotoUpload();
 if ($pu->validate()) {
     $pu->upload()->addToDB();
 }
+//==============================================================================
+
+$query = "SELECT * FROM images";
+$dbh = new PDO('mysql:host=localhost;dbname=gallery', 'root', '');
+$images = array();
+foreach ($dbh->query($query) as $row) {
+    $images[] = array(
+        'id' => $row['src'],
+        'src' => $row['src'],
+    );
+}
+header('Content-type: application/json');
+echo json_encode($images);
