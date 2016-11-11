@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#photo').submit(function () {
-        var fd = new FormData($(this));
+        var fd = new FormData(document.forms.photo);
         $.ajax({
             url: "addphoto.php",
             type: "post",

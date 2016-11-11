@@ -57,7 +57,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=gallery', 'root', '');
 $images = array();
 foreach ($dbh->query($query) as $row) {
     $images[] = array(
-        'id' => $row['src'],
+        'id' => $row['id'],
         'src' => $row['src'],
     );
 }
