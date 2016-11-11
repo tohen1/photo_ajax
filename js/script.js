@@ -7,7 +7,8 @@ $(document).ready(function () {
             data:fd,
             processData: false,
             contentType: false,
-            success: function (data) {                
+            success: function (data) {
+		$('#photo [type="file"]').val('');
                 $('.gallery').empty();
                 $.each(data, function(i,photo){
                     $('.gallery').append('<img src="'+photo.src+'"/>');
