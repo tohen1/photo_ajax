@@ -1,10 +1,13 @@
 .gallery{
-    width: 50%;
-    height: 315px;
+    min-height: 315px;
     margin: 10px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid;
-    border-radius: 50%;
+    flex-wrap: wrap;
+}
+.gallery img{
+    margin: 10px;
+    width: 200px;
 }
